@@ -24,5 +24,21 @@ function stringReplace () {
 	var str3 = "/";
 	var newStr1 = str1.replace(str2, str3);
 	console.log(newStr1);	
+	return newStr1;
 };
 
+//Math Function: Change Decimal
+
+function changeDec(num, decPlaces) {
+var places = Math.pow(10,decPlaces);
+num = Math.round(num * places) / places;
+console.log(num)
+return num;
+};
+
+//Math Function: change string into number
+
+function numberWord (number) {
+	ans = parseInt(number)
+	console.log (ans)
+};
