@@ -14,7 +14,7 @@ var capIt;
 var hrsReturned;
 var newString;
 
-// String Function for URL 
+// STRING FUNCTION FOR URL 
 
 function isUrl (phrase) {
 	var comparison1 = phrase.indexOf("http://")
@@ -36,14 +36,14 @@ function changeDec(num, decPlaces) {
 };
 
 
-//Math Function: change string into number
+//MATH FUNCTION: CHANGE STRING INTO A NUMBER 
 
 function numberWord (number) {
 	var ans = parseInt(number);
 	return ans;
 };
 
-//Function to get next number in the array
+//FUNCTION TO GET THE NEXT NUMBER IN THE ARRAY
 
 function getNextNumber (array, number) {
 	for (var i = 0; i < array.length; i++) {
