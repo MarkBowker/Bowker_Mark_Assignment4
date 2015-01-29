@@ -14,12 +14,14 @@ var capIt;
 var hrsReturned;
 var newString;
 
-// STRING FUNCTION FOR URL 
-
+// STRING FUNCTION FOR URL
+ 
 function isUrl (phrase) {
+	var sub1 = phrase.substr(0,7)
+	var sub2 = phrase.substr(0,8)
 	var comparison1 = phrase.indexOf("http://")
-	var comparison2 = phrase.indexOf("https://")                                
-		if (comparison1 != -1 || comparison2 != -1) {
+	var comparison2 = phrase.indexOf("https://")                              
+		if (sub1 === "http://" && comparison1 != -1 || sub2 === "https://" && comparison2 != -1) {
   		return true;
 		} else {
   			return false;
@@ -43,10 +45,10 @@ function numberWord (number) {
 	return ans;
 };
 
-//FUNCTION TO GET THE NEXT NUMBER IN THE ARRAY
-
 function getNextNumber (array, number) {
 	for (var i = 0; i < array.length; i++) {
+		array.sort (function (a,b){
+		return a-b });
     	if (array[i] > number) {
         return array[i];
 		}
@@ -73,7 +75,7 @@ function capFirstLetter(string){
   for(var i = 0 ; i < stringArray.length ; i++ ){
 	 var first = stringArray[i].charAt(0).toUpperCase();
      var rest = stringArray[i].slice(1);
-	 newArray[i] = first + rest;
+	 newArray[i] = first + rest.toLowerCase();
 	 newString = newArray.join(' ')
   }
   	return newString;
